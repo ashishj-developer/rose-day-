@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Rose Day Romantic Palette */
+    --background: 0 0% 98%;
+    --foreground: 350 60% 15%;
+
+    --card: 350 30% 97%;
+    --card-foreground: 350 60% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 350 60% 15%;
+
+    --primary: 350 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 50% 95%;
+    --secondary-foreground: 350 60% 25%;
+
+    --muted: 350 20% 94%;
+    --muted-foreground: 350 30% 45%;
+
+    --accent: 350 80% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 20% 88%;
+    --input: 350 20% 88%;
+    --ring: 350 70% 50%;
+
+    --radius: 1rem;
+
+    /* Custom romantic tokens */
+    --rose-deep: 350 75% 40%;
+    --rose-blush: 350 50% 92%;
+    --rose-petal: 350 65% 75%;
+    --gold-accent: 38 70% 55%;
+    --cream: 40 40% 97%;
+    
+    /* Gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(350, 70%, 50%) 0%, hsl(350, 80%, 65%) 50%, hsl(38, 70%, 55%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(350, 50%, 92%) 0%, hsl(40, 40%, 97%) 100%);
+    --gradient-envelope: linear-gradient(145deg, hsl(350, 65%, 75%) 0%, hsl(350, 70%, 50%) 100%);
+
+    /* Shadows */
+    --shadow-romantic: 0 10px 40px -10px hsl(350, 70%, 50%, 0.3);
+    --shadow-petal: 0 4px 15px -3px hsl(350, 70%, 50%, 0.2);
+    --shadow-card: 0 25px 50px -12px hsl(350, 60%, 15%, 0.15);
+  }
+
+  .dark {
+    --background: 350 30% 8%;
+    --foreground: 350 20% 95%;
+
+    --card: 350 30% 12%;
+    --card-foreground: 350 20% 95%;
+
+    --popover: 350 30% 10%;
+    --popover-foreground: 350 20% 95%;
+
+    --primary: 350 65% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 350 30% 18%;
+    --secondary-foreground: 350 20% 90%;
+
+    --muted: 350 25% 20%;
+    --muted-foreground: 350 20% 70%;
+
+    --accent: 350 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 25% 20%;
+    --input: 350 25% 20%;
+    --ring: 350 65% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .font-romantic {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-elegant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .text-gradient-romantic {
+    background: var(--gradient-romantic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-romantic {
+    background: var(--gradient-romantic);
+  }
+
+  .bg-gradient-soft {
+    background: var(--gradient-soft);
+  }
+
+  .shadow-romantic {
+    box-shadow: var(--shadow-romantic);
+  }
+
+  .shadow-petal {
+    box-shadow: var(--shadow-petal);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-sway {
+    animation: sway 4s ease-in-out infinite;
+  }
+
+  .animate-heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  .animate-petal-fall {
+    animation: petalFall 10s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg) translateX(100px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
