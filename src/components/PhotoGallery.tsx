@@ -4,11 +4,11 @@ import { Heart, X } from "lucide-react";
 
 // Using placeholder colors for photos - you can replace with actual URLs
 const photos = [
-  { src: "/images/couple-1.png", fallback: "linear-gradient(135deg, #FFE5EC 0%, #FFC2D1 100%)" },
-  { src: "/images/couple-2.png", fallback: "linear-gradient(135deg, #FFC2D1 0%, #FFB3C6 100%)" },
-  { src: "/images/couple-3.png", fallback: "linear-gradient(135deg, #FFB3C6 0%, #FF8FAB 100%)" },
-  { src: "/images/couple-4.png", fallback: "linear-gradient(135deg, #FF8FAB 0%, #FF758F 100%)" },
-  { src: "/images/couple-5.png", fallback: "linear-gradient(135deg, #FF758F 0%, #FF5C8A 100%)" },
+  { src: "/images/img1.png", fallback: "linear-gradient(135deg, #FFE5EC 0%, #FFC2D1 100%)" },
+  { src: "/images/img2.png", fallback: "linear-gradient(135deg, #FFC2D1 0%, #FFB3C6 100%)" },
+  { src: "/images/img3.png", fallback: "linear-gradient(135deg, #FFB3C6 0%, #FF8FAB 100%)" },
+  { src: "/images/img4.png", fallback: "linear-gradient(135deg, #FF8FAB 0%, #FF758F 100%)" },
+  { src: "/images/img5.png", fallback: "linear-gradient(135deg, #FF758F 0%, #FF5C8A 100%)" },
 ];
 
 const rotations = [-8, 5, -3, 7, -5];
