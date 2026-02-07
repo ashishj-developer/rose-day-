@@ -4,7 +4,7 @@ import { Heart, X } from "lucide-react";
 
 // Using placeholder colors for photos - you can replace with actual URLs
 const photos = [
-  { src: "../../public/images/img1.png", fallback: "linear-gradient(135deg, #FFE5EC 0%, #FFC2D1 100%)" },
+  { src: "/images/img1.png", fallback: "linear-gradient(135deg, #FFE5EC 0%, #FFC2D1 100%)" },
   { src: "/images/img2.png", fallback: "linear-gradient(135deg, #FFC2D1 0%, #FFB3C6 100%)" },
   { src: "/images/img3.png", fallback: "linear-gradient(135deg, #FFB3C6 0%, #FF8FAB 100%)" },
   { src: "/images/img4.png", fallback: "linear-gradient(135deg, #FF8FAB 0%, #FF758F 100%)" },
