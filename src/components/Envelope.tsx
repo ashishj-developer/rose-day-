@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
+import { useRef } from "react";
 
 interface EnvelopeProps {
   isOpen: boolean;
@@ -7,10 +8,30 @@ interface EnvelopeProps {
 }
 
 const Envelope = ({ isOpen, onClick }: EnvelopeProps) => {
+  const playedRef = useRef(false);
+
+  const playAudioOnce = () => {
+    if (playedRef.current) return;
+    playedRef.current = true;
+    try {
+      const audio = new Audio('/audio/music.mp3');
+      audio.loop = false;
+      audio.volume = 1.0;
+      // play on user interaction - should be allowed by browser
+      audio.play().catch(() => {
+        // ignore play failures
+      });
+    } catch (e) {
+      // ignore
+    }
+  };
   return (
     <motion.div
       className="relative cursor-pointer"
-      onClick={onClick}
+      onClick={() => {
+        onClick();
+        playAudioOnce();
+      }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       initial={{ scale: 0.8, opacity: 0 }}
